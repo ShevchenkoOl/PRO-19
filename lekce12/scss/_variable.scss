@@ -1,0 +1,53 @@
+$primaryColor: black;  // global
+$titleFontSize: 24px;
+
+
+// шаблоны
+%button{
+    width: 100px;
+    height: 75px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+
+// Директива @mixin
+
+@mixin borderColor($color) {
+    border: 2px dotted $color;
+}
+
+.title{
+ color: $primaryColor;
+}
+
+p{
+    color: $primaryColor;
+}
+
+.header-section{
+$secondColor: red; // local
+
+width: 200px;
+height: 200px;
+background-color: azure;
+color: $secondColor;
+font-size: large;
+}
+
+// li{
+//     color: $secondColor;  not found local variable
+// }
+
+
+// Vanil CSS
+
+// :root{
+//     --primaryColor: black;
+// }
+
+// .title{
+//  color: var(--primaryColor);
+// }
+
+// @import url("variable.css")

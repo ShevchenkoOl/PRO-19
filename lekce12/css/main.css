@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-align: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.title {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.header-section {
+  width: 200px;
+  height: 200px;
+  background-color: azure;
+  color: red;
+  font-size: large;
+}
+
+.cancel, .submit {
+  width: 100px;
+  height: 75px;
+  background-color: aqua;
+  border-radius: 15px;
+}
+
+.title {
+  color: black;
+}
+
+p {
+  color: black;
+}
+
+.header-section {
+  width: 200px;
+  height: 200px;
+  background-color: azure;
+  color: red;
+  font-size: large;
+}
+
+.title {
+  color: black;
+}
+
+.section {
+  width: 100px;
+}
+.section h2 {
+  color: red;
+}
+.section span {
+  color: blueviolet;
+  font-weight: 100;
+}
+
+.menu {
+  display: flex;
+}
+.menu__list {
+  list-style: none;
+}
+.menu__item {
+  color: blue;
+}
+.menu__link--active:active {
+  border-bottom: 1px solid black;
+}
+
+.btn, .btn2 {
+  width: 100px;
+  height: 75px;
+  background-color: aqua;
+  border-radius: 15px;
+}
+
+.btn2 {
+  background-color: purple;
+}
+
+.submit {
+  background-color: purple;
+}
+
+.cancel {
+  border: 2px dotted tomato;
+}

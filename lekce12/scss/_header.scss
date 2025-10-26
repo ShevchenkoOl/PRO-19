@@ -1,0 +1,84 @@
+// @use "variable" as *;
+@import "variable";
+
+.title{
+ color: $primaryColor;
+//  font-size: variable.$titleFontSize;
+}
+
+
+// // css
+// .section{
+//     width: 100px;
+// }
+
+// .section h2{
+//     color: red;
+// }
+// .section span{
+//     font-weight: 800;
+// }
+
+
+.section{
+     width: 100px;
+
+     h2{
+        color: red;
+     }
+
+     span{
+        color: blueviolet;
+        font-weight: 100;
+     }
+}
+
+
+// Конкатенация селекторов
+
+.menu{
+    display: flex;
+
+    &__list{
+        list-style: none;
+    }
+
+    &__item{
+        color: blue;
+    }
+
+    &__link--active:active{
+        border-bottom: 1px solid black;
+    }
+}
+
+// Директива @extend
+
+.btn{
+    width: 100px;
+    height: 75px;
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+.btn2{
+    @extend .btn;
+    background-color: purple;
+}
+
+
+
+.submit{
+    @extend %button;
+    background-color: purple;
+}
+
+.cancel{
+     @extend %button;
+}
+
+
+
+.cancel{
+    @include borderColor(tomato);
+}
