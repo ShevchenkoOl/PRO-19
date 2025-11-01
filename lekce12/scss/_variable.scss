@@ -51,3 +51,62 @@ font-size: large;
 // }
 
 // @import url("variable.css")
+
+
+// Директива @each
+
+// main.css
+// .dog-icon {
+//   background-image: url('../images/dog.png');
+// }
+
+// .cat-icon {
+//   background-image: url('../images/cat.png');
+// }
+
+// .bird-icon {
+//   background-image: url('../images/bird.png');
+// }
+
+// .turtle-icon {
+//   background-image: url('../images/turtle.png');
+// }
+
+@each $animal in dog, cat, bird, turtule {
+    .#{$animal}-icon{
+         background-color: aqua;
+         background-image: url('../images/#{$animal}.png');
+    }
+}
+
+// словари или обьекты или карты
+// хранит в себе информацию парой ключ и значение
+$color-title: black;
+$color-btn: white;
+$color-hover: blue;
+$color-background: grey;
+
+$colors: (
+    "title": black,
+    "btn": white,
+    "hover": blue,
+    "background": rgb(180, 25, 25)
+);
+
+body{
+   background-color: map-get($colors, "background") 
+}
+
+
+@function getColor($colorKey) {
+    @return map-get($colors, $colorKey) 
+}
+
+.btn3 {
+    width: 100px;
+    height: 100px;
+    font-size: 24px;
+    
+    color: getColor("btn");
+    background-color: getColor("hover");
+}

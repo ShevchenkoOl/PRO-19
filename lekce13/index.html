@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --text-size: 24px;  
+      }
+    </style>
+</head>
+<body>
+    <div class="flex flex-row">
+    <h1 class="text-red-950">
+      Hello world!
+    </h1>
+
+    <div class="w-50 h-50 border border-solid bg-[#32a852]">HEX</div>
+    <div class="w-50 h-50 border border-solid bg-[rgb(66,65,32,0.5)]">RGB</div>
+    <div class="w-50 h-50 border border-solid bg-[hsl(204,35%,19%)]">HSL</div>
+
+
+    <div class="w-30 h-30 border-red-200 border-solid bg-[#822191] ml-10 mt-10 rounded-full animate-ping"></div>
+</div>
+
+    <button class="relative px-10 py-4 text-lg font-semibold text-white
+                 rounded-full shadow-lg transition-all duration-500
+                 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+                 animate-gradient hover:scale-120 hover:text-red-950">Click me
+    </button>
+
+    <p class="text-clifford text-size">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa totam necessitatibus sunt a eveniet inventore ipsum commodi dignissimos doloribus, nesciunt, quas non! Magnam officia ex vel officiis corrupti, quidem natus.</p>
+</body>
+</html>
