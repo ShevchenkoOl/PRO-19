@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Nejstrašidelnější web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+<style>
+/* --- reset --- */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body,#app{height:100%}
+body{
+font-family: 'Montserrat', system-ui, sans-serif;
+background: radial-gradient(circle at 10% 20%, #0a0a0a 0%, #050005 40%, #000000 100%);
+color:#e6e6e6;
+overflow:hidden;
+}
+
+
+/* --- fog layers --- */
+.fog{
+position:fixed;inset:0;pointer-events:none;
+background:transparent;mix-blend-mode:screen;opacity:0.22;
+animation: drift 30s linear infinite;
+}
+.fog::before,.fog::after{
+content:"";position:absolute;inset:-20% -10% -20% -10%;
+background: radial-gradient(ellipse at center, rgba(200,200,255,0.15), transparent 40%);
+filter:blur(40px);
+}
+.fog::after{transform:scaleX(-1);opacity:0.6}
+@keyframes drift{from{transform:translateX(-5%)}to{transform:translateX(5%)}}
+
+
+/* --- moon --- */
+.moon{
+position:fixed;right:6%;top:8%;width:160px;height:160px;border-radius:50%;
+background:radial-gradient(circle at 30% 30%, #fff 0%, #f6f6f6 15%, #dcdcdc 40%, #bdbdbd 60%, transparent 100%);
+box-shadow:0 0 80px 20px rgba(255,255,230,0.08), inset -12px -8px 30px rgba(0,0,0,0.25);
+animation: moon-flicker 6s infinite;
+z-index:3;
+}
+@keyframes moon-flicker{0%,100%{filter:brightness(1)}50%{filter:brightness(0.86)}}
+
+
+/* --- headline --- */
+header{
+position:relative;z-index:4;padding:48px 24px;max-width:1100px;margin:0 auto;text-align:left
+}
+h1{
+font-family: 'Creepster', cursive;letter-spacing:2px;font-size:72px;color:#fff;
+text-shadow:0 6px 10px rgba(0,0,0,0.8), 0 0 12px rgba(255,0,40,0.06);
+transform-origin:left center;animation: float-title 4s ease-in-out infinite;
+}
+@keyframes float-title{0%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}100%{transform:translateY(0) rotate(-1deg)}}
+
+
+.subtitle{margin-top:8px;color:#cfcfcf;opacity:0.9}
+
+
+/* --- main stage --- */
+.stage{position:relative;height:calc(100% - 170px);display:flex;align-items:center;justify-content:center}
+
+
+/* haunted house silhouette */
+.house{
+width:820px;height:420px;position:relative;z-index:2;filter:drop-shadow(0 30px 40px rgba(0,0,0,0.9));
+transform:translateY(20px);
+}
+.house .shape{position:absolute;bottom:0;background:#080808}
+.house .base{left:0;right:0;height:180px}

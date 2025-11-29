@@ -209,17 +209,16 @@ let num = 8;
 
 // console.log("Hello");
 
-// let i = 0;
-// while(i <= 10){
-//     if (i === 7){
-//     console.log("Мы нашли 7");
-//     i++
-//           continue;
-          
-//     }
-//     console.log(i)
-//         i++
-// }
+let i = 0;
+while(i <= 10){
+    if (i === 7){
+    console.log("Мы нашли 7");
+          continue;
+         i++
+    }
+    console.log(i)
+        i++
+}
 
 // Найти количество гласных в слове
 
