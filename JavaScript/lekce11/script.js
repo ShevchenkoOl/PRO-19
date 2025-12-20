@@ -197,10 +197,9 @@ characters.forEach(character => {
 
     card.innerHTML = `
     <h3>${character.name}</h3>
-    <img src="${BASE_URL}/characters/${character.portrait_path}" alt="foto ${character.name}">
+    <img src="${BASE_URL}${character.portrait_path}" onerror="this.src='sim.jpg'" alt="foto ${character.name}">
     <p>Occupation: ${character.occupation}</p>
     `;
-
     container.appendChild(card);
 });
 
