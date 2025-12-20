@@ -1,0 +1,24 @@
+body{
+    justify-content: center;
+}
+.card{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+#charakters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* #btn{
+    width: 100px;
+    margin: 0 auto;
+} */
+
+.spiner{
+    display: none;
+}
