@@ -180,6 +180,14 @@ const container = document.querySelector("#charakters");
 const spinner = document.querySelector(".spiner");
 
 
+// Pagination
+const prv = document.querySelector("#prvBtn");
+const next = document.querySelector("#nextBtn");
+const containerBtn = document.querySelector(".containerBtn");
+
+let currenPage = 1;
+const limit = 20;
+
 function showSpiner(){
     spinner.style.display = "block"
 }
@@ -202,14 +210,17 @@ characters.forEach(character => {
     `;
     container.appendChild(card);
 });
-
+        containerBtn.style.display = "flex";
 }
 
-async function loadSimsons(){
+// async function loadSimsons(){
+async function loadSimsons(page = 1) {
+    
     showSpiner();
 
     try {
-        const response = await fetch(`${BASE_URL}/characters`);
+        // const response = await fetch(`${BASE_URL}/characters`);
+        const response = await fetch(`${BASE_URL}/characters?page=${page}&limit=${limit}`);
         if (!response.ok){
             throw new Error("Server error: ", response.status)
         };
@@ -217,6 +228,11 @@ async function loadSimsons(){
         const data = await response.json();
         renderCharacters(data.results);
         console.log(data);
+
+        prv.disabled = page === 1;
+        next.disabled = data.results.lenght < limit;
+
+        console.log(data.pages);
 
     } catch (error) {
         console.error("Error", error.message);
@@ -226,6 +242,15 @@ async function loadSimsons(){
 };
 
 
-
-
 btn.addEventListener("click", loadSimsons);
+prv.addEventListener("click", () => {
+    if(currenPage > 1){
+        currenPage--
+        loadSimsons(currenPage)
+    }
+});
+
+next.addEventListener("click", () => {
+        currenPage ++;
+        loadSimsons(currenPage);
+});

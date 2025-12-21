@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": "3",
+      "name": "Sveta",
+      "post": "Enj",
+      "like": 0
+    },
+    {
+      "id": "a9cc",
+      "name": "Oleg",
+      "post": "jkhhbgg\n",
+      "like": 0
+    },
+    {
+      "id": "2025-12-21T13:25:07.967Z",
+      "name": "Vlad",
+      "post": "Hello",
+      "like": 0
+    },
+    {
+      "id": "2025-12-21T13:56:45.268Z",
+      "name": "Ali",
+      "post": "kjhgasdklkjl",
+      "like": 0
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+.form{
+    width: 800px;
+    margin: 120px auto 0 auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+    gap: 30px;
+}
+
+#submit{
+    width: 80px;
+}
+
+ul{
+    list-style: none;
+}

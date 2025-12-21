@@ -79,3 +79,22 @@ body {
     font-weight: 500;
     color: #666;
 }
+
+.containerBtn{
+    display: none;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+#prvBtn,
+#nextBtn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
