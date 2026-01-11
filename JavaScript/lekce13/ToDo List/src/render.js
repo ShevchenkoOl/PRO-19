@@ -10,6 +10,7 @@ export function renderTodoList(){
             li.innerHTML = `
             <span>${todo.text}</span>
             <button class="del" id="${todo.id}">Удалить</button>
+            <button class="edit" id="${todo.id}">Редактировать</button>
             `;
 
             list.appendChild(li);
