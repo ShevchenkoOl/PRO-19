@@ -96,31 +96,31 @@
 // console.log(tesla instanceof Car); // True
 
 
-class Bank{
-    construrtor(owner, balance){
-        this.owner = owner;
-        this._balance = balance;
-    };
+// class Bank{
+//     construrtor(owner, balance){
+//         this.owner = owner;
+//         this._balance = balance;
+//     };
 
-    get balance(){
-        return this._balance
-    };
+//     get balance(){
+//         return this._balance
+//     };
 
-    set balance(value){
-        if(value < 0){
-            console.log("Balance не можкт быть отрицательным");
-            return;
-        }
-        this._balance;
-    }
-}
+//     set balance(value){
+//         if(value < 0){
+//             console.log("Balance не можкт быть отрицательным");
+//             return;
+//         }
+//         this._balance;
+//     }
+// }
 
 
-const anna = new Bank("Anna", 1500);
-console.log(anna.balance);
+// const anna = new Bank("Anna", 1500);
+// console.log(anna.balance);
 
-anna.balance = -521;
-console.log(anna.balance);
+// anna.balance = -521;
+// console.log(anna.balance);
 
 
 // Аналогия из жизни. Представь, есть отдельные машины: BMW, Audi, Tesla
@@ -238,3 +238,42 @@ console.log(anna.balance);
 // console.log(car.price);
 
 // car.price = -5000;      // ❌ ошибка?
+
+
+// let arr1 = [1, 1, 2, 4, 6, 3]; // 3
+// arr1 = [-1, -2, 2] // 1
+
+// function result(arr1){
+// const num = 1;
+// for(let i = 1; i < arr1.length; i++){
+//    if(i > num){
+//     i--
+//     return i
+//    } else {
+//     return num
+//    }
+// }
+// }
+
+// console.log(arr1.includes(3));
+
+// function result(arr1){
+//     let num = 1;
+//     while(arr1.includes(num)){
+//         num ++
+//     }
+//      return num;
+// }
+
+// console.log(result(arr1));
+
+let arr1 = [1,2,3,5, 4, 8, 9]; //6
+let arr2 = [-2,0,1,3] //2
+
+function result(arr){
+    if(arr[arr.length-1] <= 1)return 1;
+
+    return result(arr)
+}
+
+console.log(result(arr1));
